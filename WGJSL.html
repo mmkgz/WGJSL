@@ -21,16 +21,17 @@
         }
     </style>
     <div id="container">
-        
+        <title id="title">Game made with WGJSL</title>
     </div>
     
 
 <script>
     //load libraries and sources
     var container=document.getElementById('container');
+    var title=document.getElementById('title');
 
 
-
+function setTitle(text){title.textContent=text;}
 
     function createElement(tag){
         return document.createElement(tag);
@@ -61,7 +62,9 @@ function fillRect(x,y,width,height){
     context.fillRect(x,y,width,height);
 }
 
-
+function addOnClickListener(el,func){
+    el.addEventListener('click',func);
+}
 
 
     //load script
